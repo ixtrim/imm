@@ -138,7 +138,7 @@ h6 {
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
-#topbar {
+#header-top {
   background: var(--color-2);
   height: 40px;
   font-size: 14px;
@@ -147,36 +147,36 @@ h6 {
   padding: 0;
 }
 
-#topbar .contact-info i {
+#header-top .contact-info i {
   font-style: normal;
   color: var(--color-white);
 }
 
-#topbar .contact-info i a,
-#topbar .contact-info i span {
+#header-top .contact-info i a,
+#header-top .contact-info i span {
   padding-left: 5px;
   color: var(--color-white);
 }
 
-#topbar .contact-info i a {
+#header-top .contact-info i a {
   line-height: 0;
   transition: 0.3s;
   transition: 0.3s;
 }
 
-#topbar .contact-info i a:hover {
+#header-top .contact-info i a:hover {
   color: var(--color-white);
   text-decoration: underline;
 }
 
-#topbar .social-links a {
+#header-top .social-links a {
   color: var(--color-white-lighter);
   line-height: 0;
   transition: 0.3s;
   margin-left: 20px;
 }
 
-#topbar .social-links a:hover {
+#header-top .social-links a:hover {
   opacity: .7;
 }
 
