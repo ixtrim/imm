@@ -126,10 +126,10 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .menu-item-has-children > a', function(e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
+      e.preventDefault();
+      this.nextElementSibling.classList.toggle('menu-item-has-children-active')
     }
   }, true)
 
