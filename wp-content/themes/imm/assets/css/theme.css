@@ -239,7 +239,7 @@ h6 {
   position: relative;
 }
 
-.navbar>ul>li {
+.navbar>div>ul>li {
   white-space: nowrap;
   padding: 10px 0 10px 28px;
 }
@@ -292,7 +292,7 @@ h6 {
   color: var(--color-2);
 }
 
-.navbar .dropdown ul {
+.navbar .menu-item-has-children ul {
   display: block;
   position: absolute;
   left: 28px;
@@ -307,38 +307,38 @@ h6 {
   transition: 0.3s;
 }
 
-.navbar .dropdown ul li {
+.navbar .menu-item-has-children ul li {
   min-width: 200px;
 }
 
-.navbar .dropdown ul a {
+.navbar .menu-item-has-children ul a {
   padding: 10px 20px;
   font-weight: 400;
 }
 
-.navbar .dropdown ul a i {
+.navbar .menu-item-has-children ul a i {
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .menu-item-has-children ul a:hover,
+.navbar .menu-item-has-children ul .active:hover,
+.navbar .menu-item-has-children ul li:hover > a {
   color: var(--color-3);
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .menu-item-has-children:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
 }
 
-.navbar .dropdown .dropdown ul {
+.navbar .menu-item-has-children .menu-item-has-children ul {
   top: 0;
   left: calc(100% - 30px);
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .menu-item-has-children .menu-item-has-children:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -346,11 +346,11 @@ h6 {
 }
 
 @media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
+  .navbar .menu-item-has-children .menu-item-has-children ul {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .menu-item-has-children .menu-item-has-children:hover>ul {
     left: -100%;
   }
 }
@@ -440,7 +440,7 @@ h6 {
   margin: 15px;
 }
 
-.navbar-mobile .dropdown ul {
+.navbar-mobile .menu-item-has-children ul {
   position: static;
   display: none;
   margin: 10px 20px;
@@ -452,25 +452,25 @@ h6 {
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
-.navbar-mobile .dropdown ul li {
+.navbar-mobile .menu-item-has-children ul li {
   min-width: 200px;
 }
 
-.navbar-mobile .dropdown ul a {
+.navbar-mobile .menu-item-has-children ul a {
   padding: 10px 20px;
 }
 
-.navbar-mobile .dropdown ul a i {
+.navbar-mobile .menu-item-has-children ul a i {
   font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .menu-item-has-children ul a:hover,
+.navbar-mobile .menu-item-has-children ul .active:hover,
+.navbar-mobile .menu-item-has-children ul li:hover>a {
   color: var(--color-2);
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .menu-item-has-children>.menu-item-has-children-active {
   display: block;
 }
 
