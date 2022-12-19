@@ -1,7 +1,10 @@
 		<footer id="footer">
 			<?php
 
-				get_template_part( 'template-parts/footer/newsletter' );
+        if ( get_field('newsletter_module', 'options') ) {
+          get_template_part( 'template-parts/footer/newsletter' );
+        }
+				
 				get_template_part( 'template-parts/footer/top' );
 				get_template_part( 'template-parts/footer/copyright' );
 			

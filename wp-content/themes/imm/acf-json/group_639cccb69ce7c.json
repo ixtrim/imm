@@ -209,6 +209,26 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_63a048d56b80f",
+            "label": "Newsletter module",
+            "name": "newsletter_module",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Enabled",
+            "ui_off_text": "Disabled",
+            "ui": 1
         }
     ],
     "location": [
@@ -229,5 +249,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671289568
+    "modified": 1671448823
 }
