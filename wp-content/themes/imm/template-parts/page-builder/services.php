@@ -1,4 +1,7 @@
-<!-- ======= Services Section ======= -->
+<?php 
+  $services = get_sub_field('services');
+?>
+
 <section id="services" class="services">
   <div class="container" data-aos="fade-up">
 
