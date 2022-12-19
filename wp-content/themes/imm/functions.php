@@ -26,6 +26,7 @@ if ( ! function_exists( 'imm_theme' ) ) {
 
     // Register thumbnail size
     add_image_size( 'image-16-9', 1600, 900, true );
+		add_image_size( 'image-mobile', 767, 0 );
 
 	}
 }
