@@ -1,26 +1,57 @@
-<!-- ======= Testimonials Section ======= -->
-<section id="testimonials" class="testimonials">
-  <div class="container" data-aos="zoom-in">
+<?php 
+  $testimonials = get_sub_field('testimonials');
+?>
 
-    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-      <div class="swiper-wrapper">
+<?php if ( $testimonials ) { ?>
+  <section id="testimonials" class="testimonials">
+    <div class="container" data-aos="zoom-in">
 
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/wes.webp" class="testimonial-img" alt="">
-            <h3>Wes</h3>
-            <h4>Ceo &amp; Founder</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Was a complete joy to work with. The build process was easy and the team was knowledgable on everything we needed.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-        </div><!-- End testimonial item -->
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
 
+          <?php
+            $i=0;
+            while( have_rows('testimonials') ): the_row();
+
+            $i++;
+            
+            $avatar      = get_sub_field('avatar');
+            $name        = get_sub_field('name');
+            $position    = get_sub_field('position');
+            $testimonial = get_sub_field('testimonial');
+          ?>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+
+                <?php if ( $avatar ) { ?>
+                  <img src="<?php echo $avatar['url']; ?>" class="testimonial-img" alt="<?php echo $name; ?>" />
+                <?php } ?>
+
+                <?php if ( $name ) { ?>
+                  <h3><?php echo $name; ?></h3>
+                <?php } ?>
+
+                <?php if ( $position ) { ?>
+                  <h4><?php echo $position; ?></h4>
+                <?php } ?>
+
+                <?php if ( $testimonial ) { ?>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      <?php echo $testimonial; ?>
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                <?php } ?>
+              </div>
+            </div>
+
+          <?php endwhile; ?>
+
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
 
-  </div>
-</section><!-- End Testimonials Section -->
+    </div>
+  </section>
+<?php } ?>
