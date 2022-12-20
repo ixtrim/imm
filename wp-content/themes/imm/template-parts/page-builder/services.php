@@ -1,4 +1,5 @@
 <?php 
+  $heading  = get_sub_field('heading');
   $services = get_sub_field('services');
 ?>
 
@@ -6,46 +7,68 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Services</h2>
-      <h3>See what <span>we can</span> do for you.</h3>
-      <p>Our brand-building services will help you create a powerful online presence!</p>
-    </div>
 
-    <div class="row">
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon-box">
-          <div class="icon"><i class="bx bx-code-block"></i></div>
-          <h4><a href="./website-development.html">Website development and maintenance</a></h4>
-          <p>What you do need to know is why allow Integrated Mobile Marketing to be your website provider.</p>
-          <div class="btn-wrap">
-            <a href="./website-development.html" class="btn-offer"><span>Learn more</span></a>  
-          </div>
-        </div>
-      </div>
+      <?php if ( $heading['section_tag'] ) { ?>
+        <h2><?php echo $heading['section_tag']; ?></h2>
+      <?php } ?>
 
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-        <div class="icon-box">
-          <div class="icon"><i class="bx bx-search"></i></div>
-          <h4><a href="./google-business-managment.html">Google Business managment</a></h4>
-          <p>Creating a Google Business Profile is a great way to attract new customers to your business through Google search and Maps.</p>
-          <div class="btn-wrap">
-            <a href="./google-business-managment.html" class="btn-offer"><span>Learn more</span></a>  
-          </div>
-        </div>
-      </div>
+      <?php if ( $heading['header'] ) { ?>
+        <h3><?php echo $heading['header']; ?></h3>
+      <?php } ?>
 
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-        <div class="icon-box">
-          <div class="icon"><i class="bx bx-chat"></i></div>
-          <h4><a href="./reputation-managment.html">Reputation Management</a></h4>
-          <p>If you fail to earn your customers' trust, you may find it much harder to get your business up and running.</p>
-          <div class="btn-wrap">
-            <a href="./reputation-managment.html" class="btn-offer"><span>Learn more</span></a>  
-          </div>
-        </div>
-      </div>
+      <?php if ( $heading['description'] ) { ?>
+        <p><?php echo $heading['description']; ?></p>
+      <?php } ?>
 
     </div>
+
+    <?php if ( $services ) { ?>
+      <div class="row">
+
+        <?php
+          $i=0;
+          while( have_rows('services') ): the_row();
+
+          $i++;
+          
+          $icon        = get_sub_field('icon');
+          $header      = get_sub_field('header');
+          $description = get_sub_field('description');
+          $button      = get_sub_field('button');
+        ?>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch<?php if ( $i === 2 ) { ?> mt-4 mt-md-0<?php } ?><?php if ( $i === 3 ) { ?> mt-4 mt-lg-0<?php } ?>" data-aos="zoom-in" data-aos-delay="<?php echo $i; ?>00">
+            <div class="icon-box">
+
+              <?php if ( $icon ) { ?>
+                <div class="icon">
+                  <?php echo $icon; ?>
+                </div>
+              <?php } ?>
+
+              <?php if ( $header ) { ?>
+                <h4>
+                  <a href="./website-development.html" aria-label="<?php echo $header; ?>"><?php echo $header; ?></a>
+                </h4>
+              <?php } ?>
+
+              <?php if ( $description ) { ?>
+                <p><?php echo $description; ?></p>
+              <?php } ?>
+              
+              <?php if ( $button ) { ?>
+                <div class="btn-wrap">
+                  <a href="<?php echo $button['url']; ?>" class="<?php echo $button['class']; ?>" aria-label="<?php echo $button['title']; ?>"><span><?php echo $button['copy']; ?></span></a>  
+                </div>
+              <?php } ?>
+
+            </div>
+          </div>
+
+        <?php endwhile; ?>
+
+      </div>
+    <?php } ?>
 
   </div>
-</section><!-- End Services Section -->
+</section>
