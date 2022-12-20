@@ -8,13 +8,17 @@
 
       <div class="row">
 
-        <?php $i=0; while( have_rows('counters') ): the_row();
+        <?php
+          $i=0;
+          while( have_rows('counters') ): the_row();
+
           $i++;
           $middle = [2,5,7,9];
           $extra_class = "";
           if ( in_array($i, $middle) ) {
             $extra_class = " mt-lg-0 mb-lg-0 mt-md-2 mb-md-2";
           }
+          
           $icon     = get_sub_field('icon');
           $start    = get_sub_field('start_value');
           $end      = get_sub_field('end_value');
