@@ -1195,16 +1195,38 @@ section {
 
 .contact .php-email-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
-  padding: 30px;
+  padding: 0 30px;
 }
 
-.contact .php-email-form .error-message {
-  display: none;
-  color: var(--color-white);
-  background: #ed3c0d;
+.contact .php-email-form p {
+  margin: 0;
+  padding: 0;
+}
+
+.contact .php-email-form .wpcf7-not-valid-tip {
+  color: #ed3c0d;
   text-align: left;
-  padding: 15px;
   font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, 
+.wpcf7 form.unaccepted .wpcf7-response-output, 
+.wpcf7 form.payment-required .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output, 
+.wpcf7 form.aborted .wpcf7-response-output {
+  background: #ed3c0d;
+  border: none;
+  padding: 10px;
+  color: var(--color-white);
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 30px 0 0;
 }
 
 .contact .php-email-form .error-message br+br {
@@ -1264,7 +1286,7 @@ section {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form .wpcf7-submit {
   background: var(--color-2);
   border: 0;
   padding: 10px 30px;
@@ -1276,7 +1298,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form .wpcf7-submit:hover {
   background: var(--color-3);
 }
 
