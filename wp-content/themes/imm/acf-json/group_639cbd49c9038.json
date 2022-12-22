@@ -1267,6 +1267,26 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_63a4e5febe4ff",
+                            "label": "Light background ?",
+                            "name": "light_background",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -1299,5 +1319,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671585829
+    "modified": 1671751313
 }
