@@ -659,17 +659,17 @@ img {
   margin: 0 auto;
   border-radius: 0;
   padding: 20px 50px;
-  background: var(--color-white);
+  background: var(--color-4);
   border: none;
-  color: var(--color-3);
+  color: var(--color-2);
   text-transform: uppercase;
   font-weight: 600;
 }
 
 #cta-bar .btn:hover {
-  background: var(--color-3);
+  background: var(--color-2);
   border: none;
-  color: var(--color-white);
+  color: var(--color-4);
 }
 
 /*--------------------------------------------------------------
