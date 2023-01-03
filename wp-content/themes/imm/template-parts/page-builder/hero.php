@@ -26,13 +26,17 @@
           $rel_1 = $rel_1 . " " . $rel;
         }
 
+          if ($cta_1['url'] && $cta_1['copy']) {
       ?>
         
         <a href="<?php echo $cta_1['url']; ?>" class="btn-get-started <?php echo $cta_1['class']; ?>" <?php if ( $cta_1['target'] === '_blank' ) { ?> target="_blank"<?php } ?><?php if ( $cta_1['relation'] ) { ?> rel="<?php echo $rel_1; ?>"<?php } ?><?php if ( $cta_1['title'] ) { ?> aria-label="<?php echo $cta_1['title']; ?>"<?php } ?>><?php echo $cta_1['copy']; ?></a>
         <?php if ( strpos($cta_1['class'], 'typeform-share' ) !== false ) { ?>
           <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
         <?php } ?>
-      <?php } ?>
+        <?php
+            }
+          } 
+        ?>
 
       <?php if ( $cta_2 ) {
       
@@ -43,12 +47,16 @@
         $rel_2 = $rel_2 . " " . $rel;
       }
       
+       if ($cta_2['url'] && $cta_2['copy']) {
       ?>
         <a href="<?php echo $cta_2['url']; ?>" class="btn-watch-video <?php echo $cta_2['class']; ?>"<?php if ( $cta_2['target'] === '_blank' ) { ?> target="_blank"<?php } ?><?php if ( $cta_2['relation'] ) { ?> rel="<?php echo $rel_2; ?>"<?php } ?><?php if ( $cta_2['title'] ) { ?> aria-label="<?php echo $cta_2['title']; ?>"<?php } ?>>
           <i class="bi bi-arrow-bar-down"></i>
           <span><?php echo $cta_2['copy']; ?></span>
       </a>
-      <?php } ?>
+      <?php
+         }
+        } 
+      ?>
     </div>
   </div>
 </section>
